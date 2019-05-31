@@ -66,14 +66,13 @@
   <meta property="og:title" content="{{ site.title }}" />
   {% endif %}
 
-   {% if page.meta-description %}
+  {% if page.meta-description %}
   <meta property="og:description" content="{{ page.meta-description }}">
   {% elsif page.subtitle %}
   <meta property="og:description" content="{{ page.subtitle }}">
   {% else %}
   <meta property="og:description" content="{{ page.content | strip_html | xml_escape | truncatewords: 50 }}">
   {% endif %}
-
 
   <meta property="og:type" content="website" />
 
@@ -90,7 +89,6 @@
   {% elsif site.avatar %}
   <meta property="og:image" content="{{ site.url }}{{ site.avatar }}" />
   {% endif %}
-
 
   <!-- Twitter summary cards -->
   <meta name="twitter:card" content="summary" />
@@ -127,6 +125,4 @@
   <!-- Staticman -->
   <link rel="stylesheet" href="{{ "/css/staticman.css" | prepend: site.baseurl }}" />
   {% endif %}
-  
-  {% seo %}
 </head>
